@@ -1,0 +1,12 @@
+Nombre del Framework JOWO
+
+reglas: {
+    Nomenclatura: {
+        camelCase
+    }
+
+    clases{
+        jw-(nombre)
+    }
+
+}
