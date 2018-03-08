@@ -1,6 +1,30 @@
-.jw-flex {
-    display: flex;
-    flex-flow: row wrap;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    background: #222;
+}
+                        /* ======== ======== JOWO VARIABLES COLORES ======== ======== */
+
+$green: #1fff48;
+$red: #fd4242;
+$blue: #494cfa;
+$black: #222222;
+$yellow: #ffff23;
+$orange: #ff6619;
+$transparent: transparent;
+$white: #fff;
+
+                        /* ======== ======== JOWO CONTAINERS ======== ======== */
+
+.jw-container{ width: 100%; position: relative; height: 300px;}
+.jw-container-flex { 
+    width: 100%;
+    display: flex; flex-flow: row wrap;
     .jw-auto{ flex:1;}
     .jw-f1 { flex: 1; }
     .jw-f2 { flex: 2; }
@@ -14,23 +38,115 @@
     .jw-f10 { flex: 10; }
     .jw-f11 { flex: 11; }
     .jw-f12 { flex: 12; }
-    /*width*/
-    .jw-w10 { width: 10%; }
-    .jw-w20 { width: 20%; }
-    .jw-w30 { width: 30%; }
-    .jw-w40 { width: 40%; }
-    .jw-w50 { width: 50%; }
-    .jw-w60 { width: 60%; }
-    .jw-w70 { width: 70%; }
-    .jw-w80 { width: 80%; }
-    .jw-w90 { width: 90%; }
-    .jw-w100 { width: 100%; }
+    
+    
 }
+                        /* ======== ======== JOWO WIDTH ======== ======== */
 
-.margin {
-    margin: 20px;
-}
-.jw-green { background: #22ff33; }
-.jw-red   { background: #ff3434; }
-.jw-blue  { background: #3434ff; }
-.jw-black { background: #222222; }
+.jw-w10 { width: 10%; }
+.jw-w20 { width: 20%; }
+.jw-w30 { width: 30%; }
+.jw-w40 { width: 40%; }
+.jw-w50 { width: 50%; }
+.jw-w60 { width: 60%; }
+.jw-w70 { width: 70%; }
+.jw-w80 { width: 80%; }
+.jw-w90 { width: 90%; }
+.jw-w100 { width: 100%; }
+
+                        /* ======== ======== JOWO MARGIN ======== ======== */
+
+.jw-margin8 { margin: 8px; }
+.jw-margin16{ margin: 16px;}
+.jw-margin24{ margin: 24px;}
+.jw-margin32{ margin: 32px;}
+.jw-margin64{ margin: 64px;}
+
+.jw-margin8-v { margin: 8px 0; }
+.jw-margin16-v{ margin: 16px 0;}
+.jw-margin24-v{ margin: 24px 0;}
+.jw-margin32-v{ margin: 32px 0;}
+.jw-margin64-v{ margin: 64px 0;}
+
+.jw-margin8-h { margin: 0 8px; }
+.jw-margin16-h{ margin: 0 16px;}
+.jw-margin24-h{ margin: 0 24px;}
+.jw-margin32-h{ margin: 0 32px;}
+.jw-margin64-h{ margin: 0 64px;}
+
+                        /* ======== ======== JOWO PADDING ======== ======== */
+
+.jw-padding8 { padding: 8px; } 
+.jw-padding10{ padding: 10px;} 
+.jw-padding16{ padding: 16px;}
+.jw-padding24{ padding: 24px;}
+.jw-padding32{ padding: 32px;}
+.jw-padding64{ padding: 64px;}
+
+
+                        /* ======== ======== JOWO BACKGROUND ======== ======== */
+
+.jw-bg-green  { background: $green; }
+.jw-bg-red    { background: $red; }
+.jw-bg-blue   { background: $blue; }
+.jw-bg-black  { background: $black; }
+.jw-bg-yellow { background: $yellow; }
+.jw-bg-orange { background: $orange; }
+.jw-bg-transparent { background: $transparent;}
+
+
+                        /* ======== ======== JOWO DISPLAY ======== ======== */
+
+                                /* ======== JOWO DISPLAY TOP========*/
+
+.jw-display-top-left     { position: absolute; top: 0%;    left:  0%;   transform: translate(0%,0%);     }
+.jw-display-top-center   { position: absolute; top: 0%;    left: 50%;   transform: translate(-50%,0%);   }
+.jw-display-top-right    { position: absolute; top: 0%;    right: 0%;   transform: translate(0%,0%);     }
+                                /* ======== JOWO DISPLAY CENTER========*/
+
+.jw-display-center       { position: absolute; top: 50%;   left: 50%;   transform: translate(-50%,-50%); }
+.jw-display-center-left  { position: absolute; top: 50%;   left:  0%;   transform: translate(0%,-50%);   }
+.jw-display-center-right { position: absolute; top: 50%;   right: 0%;   transform: translate(0%,-50%);   }
+                                /* ======== JOWO DISPLAY RIGHT========*/
+
+.jw-display-bottom-left  { position: absolute; bottom: 0%; left:  0%;   transform: translate(0%,0%);     }
+.jw-display-bottom-center{ position: absolute; bottom: 0%; left: 50%;   transform: translate(-50%,0%);   }
+.jw-display-bottom-right { position: absolute; bottom: 0%; right: 0%;   transform: translate(0%,0%);     }
+
+.jw-button{ border: none; padding: 10px 40px; border-radius: 5px; cursor: pointer; transition: all .2s ease-in-out; }
+.jw-button:active{ transform: scale(.95);}
+
+
+                        /* ======== ======== JOWO TEXT COLOR ======== ======== */
+
+
+
+.jw-text-green{ color:$green; }
+.jw-text-red{ color:$red; }
+.jw-text-black{ color:$black; }
+.jw-text-orange{ color:$orange; }
+.jw-text-white{ color:$white; }
+.jw-text-blue{ color:$blue; }
+.jw-text-yellow{ color:$yellow; }
+
+                        /* ======== ======== JOWO NEON HOVER ======== ======== */
+
+.jw-neon-green-hover:hover{ box-shadow: 0 0 6px $green; }
+.jw-neon-red-hover:hover{ box-shadow: 0 0 6px $red; }
+.jw-neon-black-hover:hover{ box-shadow: 0 0 6px $black; }
+.jw-neon-orange-hover:hover{ box-shadow: 0 0 6px $orange; }
+.jw-neon-white-hover:hover{ box-shadow: 0 0 6px $white; }
+.jw-neon-blue-hover:hover{ box-shadow: 0 0 6px $blue; }
+.jw-neon-yellow-hover:hover{ box-shadow: 0 0 6px $yellow; }
+
+
+
+                        /* ======== ======== JOWO BUTTON HOVER ======== ======== */
+
+.jw-border-green{ border: 1px solid $green; }
+.jw-border-black{ border: 1px solid $black; }
+.jw-border-orange{ border:1px solid $orange; }
+.jw-border-red{ border:   1px solid $red; }
+.jw-border-yellow{ border:   1px solid $yellow; }
+.jw-border-white{ border:   1px solid $white; }
+.jw-border-blue{ border:   1px solid $red; }
