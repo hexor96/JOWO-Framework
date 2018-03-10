@@ -21,7 +21,7 @@ $white: #fff;
 
                         /* ======== ======== JOWO CONTAINERS ======== ======== */
 
-.jw-container{ width: 100%; position: relative; height: 300px;}
+.jw-container{ width: 100%; position: relative; min-height: 300px;}
 .jw-container-flex { 
     width: 100%;
     display: flex; flex-flow: row wrap;
@@ -37,18 +37,19 @@ $white: #fff;
     .jw-f9 { flex: 9; }
     .jw-f10 { flex: 10; }
     .jw-f11 { flex: 11; }
-    .jw-f12 { flex: 12; }
-    
-    
+    .jw-f12 { flex: 12; }   
 }
                         /* ======== ======== JOWO WIDTH ======== ======== */
 
 .jw-w10 { width: 10%; }
 .jw-w20 { width: 20%; }
+.jw-w25 { width: 25%; }
 .jw-w30 { width: 30%; }
+.jw-w33 { width: 33.3333%; }
 .jw-w40 { width: 40%; }
 .jw-w50 { width: 50%; }
 .jw-w60 { width: 60%; }
+.jw-w66 { width: 66.6666%; }
 .jw-w70 { width: 70%; }
 .jw-w80 { width: 80%; }
 .jw-w90 { width: 90%; }
@@ -92,6 +93,7 @@ $white: #fff;
 .jw-bg-black  { background: $black; }
 .jw-bg-yellow { background: $yellow; }
 .jw-bg-orange { background: $orange; }
+.jw-bg-white { background: $white;}
 .jw-bg-transparent { background: $transparent;}
 
 
@@ -102,6 +104,7 @@ $white: #fff;
 .jw-display-top-left     { position: absolute; top: 0%;    left:  0%;   transform: translate(0%,0%);     }
 .jw-display-top-center   { position: absolute; top: 0%;    left: 50%;   transform: translate(-50%,0%);   }
 .jw-display-top-right    { position: absolute; top: 0%;    right: 0%;   transform: translate(0%,0%);     }
+
                                 /* ======== JOWO DISPLAY CENTER========*/
 
 .jw-display-center       { position: absolute; top: 50%;   left: 50%;   transform: translate(-50%,-50%); }
@@ -118,8 +121,6 @@ $white: #fff;
 
 
                         /* ======== ======== JOWO TEXT COLOR ======== ======== */
-
-
 
 .jw-text-green{ color:$green; }
 .jw-text-red{ color:$red; }
@@ -150,3 +151,21 @@ $white: #fff;
 .jw-border-yellow{ border:   1px solid $yellow; }
 .jw-border-white{ border:   1px solid $white; }
 .jw-border-blue{ border:   1px solid $red; }
+
+                        /* ========  ======== Sliders ========  ======== */
+
+.slider{
+    overflow: hidden;
+    margin: auto;
+    height: 100vh;
+    .slides{
+        display: flex;
+        height: 100%;
+        transition: all 1s;
+        .slide{
+            width: 100%;
+            height: 100%;
+            list-style: none;
+        }
+    }
+}
