@@ -160,21 +160,72 @@ $white: #fff;
 
                         /* ========  ======== JOWO Sliders ========  ======== */
                         
-.slider{
+.sliderContainer {
+    z-index: 0;
     overflow: hidden;
-    margin: auto;
-    height: 100vh;
-    .slides{
-        display: flex;
+    position: relative;
+    .sliderWrapper {
         height: 100%;
-        transition: all 1s;
-        .slide{
-            width: 100%;
-            height: 100%;
-            list-style: none;
+        display: flex;
+        .sliderItem {
+            flex: 1;
         }
     }
 }
+
+.sliderItem:nth-of-type(1) {
+    background-color: tomato;
+}
+
+.sliderItem:nth-of-type(2) {
+    background-color: dodgerblue;
+}
+
+.sliderItem:nth-of-type(3) {
+    background-color: mediumseagreen;
+}
+
+.sliderItem:nth-of-type(4) {
+    background-color: slateblue;
+}
+
+.sliderItem:nth-of-type(5) {
+    background-color: lightyellow;
+}
+
+.sliderButtons {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(0, 0, 0, .3);
+    opacity: 0;
+    transition: all .5s;
+    button {
+        border: none;
+        border-radius: 50%;
+        width: 25px;
+        height: 25px;
+        background-color: #323232;
+    }
+    .sliderContainer:hover & {
+        opacity: 1;
+    }
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
                         /* ========  ======== JOWO REGLAS MEDIA QUERIES ========  ======== */
 
 #im1{
