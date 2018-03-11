@@ -100,25 +100,25 @@ $white: #fff;
 .jw-bg-gradient-elegant{background: linear-gradient(rgba(0,0,0,.8), rgba(0,0,0,.8))};
 
 
-/* ======== ======== JOWO TEXT COLOR ======== ======== */
 
-.jw-text-green { color:$green; }
-.jw-text-red   { color:$red; }
-.jw-text-black { color:$black; }
-.jw-text-orange{ color:$orange; }
-.jw-text-white { color:$white; }
-.jw-text-blue  { color:$blue; }
-.jw-text-yellow{ color:$yellow; }
 
                         /* ======== ======== JOWO NEON HOVER ======== ======== */
                         
-                        .jw-neon-green-hover:hover { box-shadow: 0 0 6px $green; }
+.jw-neon-green-hover:hover { box-shadow: 0 0 6px $green; }
 .jw-neon-red-hover:hover   { box-shadow: 0 0 7px $red; }
 .jw-neon-black-hover:hover { box-shadow: 0 0 7px $black; }
 .jw-neon-orange-hover:hover{ box-shadow: 0 0 7px $orange; }
 .jw-neon-white-hover:hover { box-shadow: 0 0 7px $white; }
 .jw-neon-blue-hover:hover  { box-shadow: 0 0 7px $blue; }
 .jw-neon-yellow-hover:hover{ box-shadow: 0 0 7px $yellow; }
+
+.jw-neon-green { box-shadow: 0 0 6px $green; }
+.jw-neon-red   { box-shadow: 0 0 7px $red; }
+.jw-neon-black { box-shadow: 0 0 7px $black; }
+.jw-neon-orange{ box-shadow: 0 0 7px $orange; }
+.jw-neon-white { box-shadow: 0 0 7px $white; }
+.jw-neon-blue  { box-shadow: 0 0 7px $blue; }
+.jw-neon-yellow{ box-shadow: 0 0 7px $yellow; }
 
 
 
@@ -177,31 +177,59 @@ $white: #fff;
 }
                         /* ========  ======== JOWO REGLAS MEDIA QUERIES ========  ======== */
 
+#im1{
+    background: linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.8)), url('https://i.pinimg.com/originals/07/e1/49/07e1495d10c992aa6dd59d640637f9fe.jpg');
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+}
 @media screen and (max-width:768px)
 {
     .jw-row{ .jw-col-auto{ flex: 1 1 50%;}} 
+    .jw-navbar .jw-nav-list{ display: none;}
+    .jw-navbar .nav-toggle {display: block;}
+    .jw-navbar{display: block;}
+    .jw-navbar .jw-nav-logo {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%,0%);
+     }
 }
 @media screen and (max-width:480px)
 {
     .jw-row{ .jw-col-auto{ flex: 1 1 100%;}} 
 }
+
+                    /* ========  ======== JOWO NAVBAR ========  ======== */
+
+/* ========  ======== JOWO NAVBAR OPTIONS ========  ======== */                    
+                    
 .jw-nav-fixed{
     position: fixed;
 }
+.dropdown-effect:hover  .jw-sub-menu{
+    transform: scale(1,1);
+}
+/* ========  ======== JOWO NAVBAR DEFAULT ========  ======== */                    
+
 .jw-navbar{
     width: 100%;
     display: flex;
     justify-content: space-between;
     z-index: 100;
+    
+    position: relative;
+    
 }
 .jw-nav-logo{
     padding: 10px;
 }
 .jw-nav-logo a{
     text-decoration: none;
-    color: $orange;
+    color: $red;
     display: block;
-    font-size: 1.4em;
+    font-size: 1.5em;
 
 }
 .jw-nav-list{
@@ -221,6 +249,8 @@ $white: #fff;
 .jw-nav-link:hover{
     background: rgba(255,255,255,.3);
 }
+/* ========  ======== JOWO SUB-NAVBAR ========  ======== */                    
+
 .jw-sub-menu{
     position: absolute;
     display: block;
@@ -228,9 +258,6 @@ $white: #fff;
     transition: all .2s ease-in-out;
     transform-origin: top center;
     transform: scale(1,0);
-}
-.dropdown-effect:hover  .jw-sub-menu{
-    transform: scale(1,1);
 }
 .jw-sub-nav-item{
     list-style: none;
@@ -242,12 +269,51 @@ $white: #fff;
     padding: 15px;
 }
 .jw-sub-nav-link:hover{
-        background: white;
-        color: #222;
+    background: white;
+    color: #222;
 }
-#im1{
-    background: linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.8)), url('https://i.pinimg.com/originals/07/e1/49/07e1495d10c992aa6dd59d640637f9fe.jpg');
-    background-attachment: fixed;
-    background-position: center center;
-    background-size: cover;
+/* ========  ======== JOWO TOGGLE-NAVBAR ========  ======== */                    
+
+.nav-toggle{
+    display: none;
+    
+}
+.icon-toggle{
+    display: block;
+    cursor: pointer;
+    margin: 10px;
+    
+}
+.line{
+    margin: 5px 0;
+    width: 30px;
+    height: 2px;
+    border-radius: 5px;
+    transition: all .2s ease-in-out;
+}
+.move1{
+    transform-origin: left center;
+    transform: rotate(45deg) translate(0,-5px);
+}
+.move2{
+    opacity: 0;
+    transition: all .2s ease-in-out;
+
+}
+.move3{
+    transition: all .2s ease-in-out;
+    transform-origin: left center;
+    transform: rotate(-45deg) translate(0,5px) ;
+}
+.nav-list-toggle{
+    width: 100%;
+    position: absolute;
+    height: 0%;
+    transition: all .2s ease-in-out;
+    overflow: hidden;
+    
+    
+}
+.pe{   
+    height: auto;
 }

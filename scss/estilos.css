@@ -228,35 +228,6 @@
   background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
 }
 
-/* ======== ======== JOWO TEXT COLOR ======== ======== */
-.jw-text-green {
-  color: #1fff48;
-}
-
-.jw-text-red {
-  color: #fd4242;
-}
-
-.jw-text-black {
-  color: #222222;
-}
-
-.jw-text-orange {
-  color: #ff6619;
-}
-
-.jw-text-white {
-  color: #fff;
-}
-
-.jw-text-blue {
-  color: #494cfa;
-}
-
-.jw-text-yellow {
-  color: #ffdf23;
-}
-
 /* ======== ======== JOWO NEON HOVER ======== ======== */
 .jw-neon-green-hover:hover {
   box-shadow: 0 0 6px #1fff48;
@@ -283,6 +254,34 @@
 }
 
 .jw-neon-yellow-hover:hover {
+  box-shadow: 0 0 7px #ffdf23;
+}
+
+.jw-neon-green {
+  box-shadow: 0 0 6px #1fff48;
+}
+
+.jw-neon-red {
+  box-shadow: 0 0 7px #fd4242;
+}
+
+.jw-neon-black {
+  box-shadow: 0 0 7px #222222;
+}
+
+.jw-neon-orange {
+  box-shadow: 0 0 7px #ff6619;
+}
+
+.jw-neon-white {
+  box-shadow: 0 0 7px #fff;
+}
+
+.jw-neon-blue {
+  box-shadow: 0 0 7px #494cfa;
+}
+
+.jw-neon-yellow {
   box-shadow: 0 0 7px #ffdf23;
 }
 
@@ -462,9 +461,31 @@
 }
 
 /* ========  ======== JOWO REGLAS MEDIA QUERIES ========  ======== */
+#im1 {
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("https://i.pinimg.com/originals/07/e1/49/07e1495d10c992aa6dd59d640637f9fe.jpg");
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+}
+
 @media screen and (max-width: 768px) {
   .jw-row .jw-col-auto {
     flex: 1 1 50%;
+  }
+  .jw-navbar .jw-nav-list {
+    display: none;
+  }
+  .jw-navbar .nav-toggle {
+    display: block;
+  }
+  .jw-navbar {
+    display: block;
+  }
+  .jw-navbar .jw-nav-logo {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0%);
   }
 }
 
@@ -474,15 +495,23 @@
   }
 }
 
+/* ========  ======== JOWO NAVBAR ========  ======== */
+/* ========  ======== JOWO NAVBAR OPTIONS ========  ======== */
 .jw-nav-fixed {
   position: fixed;
 }
 
+.dropdown-effect:hover .jw-sub-menu {
+  transform: scale(1, 1);
+}
+
+/* ========  ======== JOWO NAVBAR DEFAULT ========  ======== */
 .jw-navbar {
   width: 100%;
   display: flex;
   justify-content: space-between;
   z-index: 100;
+  position: relative;
 }
 
 .jw-nav-logo {
@@ -491,9 +520,9 @@
 
 .jw-nav-logo a {
   text-decoration: none;
-  color: #ff6619;
+  color: #fd4242;
   display: block;
-  font-size: 1.4em;
+  font-size: 1.5em;
 }
 
 .jw-nav-list {
@@ -516,6 +545,7 @@
   background: rgba(255, 255, 255, 0.3);
 }
 
+/* ========  ======== JOWO SUB-NAVBAR ========  ======== */
 .jw-sub-menu {
   position: absolute;
   display: block;
@@ -523,10 +553,6 @@
   transition: all .2s ease-in-out;
   transform-origin: top center;
   transform: scale(1, 0);
-}
-
-.dropdown-effect:hover .jw-sub-menu {
-  transform: scale(1, 1);
 }
 
 .jw-sub-nav-item {
@@ -545,10 +571,50 @@
   color: #222;
 }
 
-#im1 {
-  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("https://i.pinimg.com/originals/07/e1/49/07e1495d10c992aa6dd59d640637f9fe.jpg");
-  background-attachment: fixed;
-  background-position: center center;
-  background-size: cover;
+/* ========  ======== JOWO TOGGLE-NAVBAR ========  ======== */
+.nav-toggle {
+  display: none;
+}
+
+.icon-toggle {
+  display: block;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.line {
+  margin: 5px 0;
+  width: 30px;
+  height: 2px;
+  border-radius: 5px;
+  transition: all .2s ease-in-out;
+}
+
+.move1 {
+  transform-origin: left center;
+  transform: rotate(45deg) translate(0, -5px);
+}
+
+.move2 {
+  opacity: 0;
+  transition: all .2s ease-in-out;
+}
+
+.move3 {
+  transition: all .2s ease-in-out;
+  transform-origin: left center;
+  transform: rotate(-45deg) translate(0, 5px);
+}
+
+.nav-list-toggle {
+  width: 100%;
+  position: absolute;
+  height: 0%;
+  transition: all .2s ease-in-out;
+  overflow: hidden;
+}
+
+.pe {
+  height: auto;
 }
 /*# sourceMappingURL=estilos.css.map */

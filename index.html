@@ -12,9 +12,9 @@
 
 <body>
 
-  <nav class="jw-navbar jw-nav-fixed jw-bg-transparent">
+  <nav class="jw-navbar jw-nav-fixed jw-bg-black">
     <div class="jw-nav-logo">
-      <a href="">Navbar</a>
+      <a href="">JOWO</a>
     </div>
     <ul class="jw-nav-list">
       <li class="jw-nav-item dropdown-effect">
@@ -42,18 +42,55 @@
         <a class="jw-nav-link" href="">Item 4</a>
       </li>
     </ul>
+    <div class="nav-toggle">
+      <div class="icon-toggle">
+        <div id="line1" class="line jw-bg-red jw-neon-red"></div>
+        <div id="line2" class="line jw-bg-red jw-neon-red"></div>
+        <div id="line3" class="line jw-bg-red jw-neon-red"></div>
+      </div>
+      
+      <ul class="nav-list-toggle jw-bg-black">
+        
+          <li class="jw-nav-toggle-item"><a class="jw-nav-toggle-link" href="">Item 1</a></li>
+          <li class="jw-nav-toggle-item"><a class="jw-nav-toggle-link" href="">Item 2</a></li>
+          <li class="jw-nav-toggle-item"><a class="jw-nav-toggle-link" href="">Item 3</a></li>
+          <li class="jw-nav-toggle-item"><a class="jw-nav-toggle-link" href="">Item 4</a></li>
+      </ul>
+    </div>
+
   </nav>
 
-  <div id="im1" class="jw-full-screen jw-bg-red">
+  <div id="im1" class="jw-full-screen">
     <br>
     <br>
     <br>
     <div class="jw-display-center jw-w50">
       <h2>WE ARE LIVE</h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse ratione cumque, deleniti id dolore doloribus maiores temporibus! Repudiandae officia sapiente magnam magni ducimus reiciendis totam, soluta consectetur hic iure repellendus?</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse ratione cumque, deleniti id dolore doloribus maiores
+        temporibus! Repudiandae officia sapiente magnam magni ducimus reiciendis totam, soluta consectetur hic iure repellendus?</p>
     </div>
   </div>
+  <div class="jw-full-screen jw-bg-blue">
+      <div class="jw-display-center jw-w50">
+          <h2>WE ARE LIVE</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse ratione cumque, deleniti id dolore doloribus maiores
+            temporibus! Repudiandae officia sapiente magnam magni ducimus reiciendis totam, soluta consectetur hic iure repellendus?</p>
+        </div>
+  </div>
 
+  <script>
+    var toggle = document.getElementsByClassName('icon-toggle');
+    var line1 = document.getElementById('line1');
+    var line2 = document.getElementById('line2');
+    var line3 = document.getElementById('line3');
+    var p = document.getElementsByClassName('nav-list-toggle');
+    toggle[0].addEventListener('click', e => {
+      line1.classList.toggle('move1');
+      line2.classList.toggle('move2');
+      line3.classList.toggle('move3');
+      p[0].classList.toggle('pe');
+    })
+  </script>
 
 </body>
 
