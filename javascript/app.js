@@ -43,6 +43,6 @@ function funcionSlider() {
             }
         }
         recorrerSlides();
-        setInterval(recorrerSlides, 5000);
+        setInterval(recorrerSlides, 2000);
     }
 }

@@ -1,46 +1,59 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300');
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: 'Roboto', sans-serif;
+    color: white;
 }
+                        /* ======== ======== JOWO NAVBAR ======== ======== */
 
-body{
-    background: #222;
-}
+
+
                         /* ======== ======== JOWO VARIABLES COLORES ======== ======== */
-
 $green: #1fff48;
 $red: #fd4242;
 $blue: #494cfa;
 $black: #222222;
-$yellow: #ffff23;
+$yellow: #ffdf23;
 $orange: #ff6619;
 $transparent: transparent;
 $white: #fff;
+                   /* ======== ======== JOWO CONTAINERS ======== ======== */
+.jw-container   { width: 100%;  position: relative; height: auto; padding: 10px;}
+.jw-full-screen { width: 100%; height: 100vh; position: relative; z-index: -1}
 
-                        /* ======== ======== JOWO CONTAINERS ======== ======== */
+                        /* ======== ======== JOWO CONTAINER FLEX ======== ======== */
 
-.jw-container{ width: 100%; position: relative; min-height: 300px;}
-.jw-container-flex { 
+.jw-row { 
     width: 100%;
     display: flex; flex-flow: row wrap;
-    .jw-auto{ flex:1;}
-    .jw-f1 { flex: 1; }
-    .jw-f2 { flex: 2; }
-    .jw-f3 { flex: 3; }
-    .jw-f4 { flex: 4; }
-    .jw-f5 { flex: 5; }
-    .jw-f6 { flex: 6; }
-    .jw-f7 { flex: 7; }
-    .jw-f8 { flex: 8; }
-    .jw-f9 { flex: 9; }
-    .jw-f10 { flex: 10; }
-    .jw-f11 { flex: 11; }
-    .jw-f12 { flex: 12; }   
+    .jw-col-auto{ flex:1 ;}
+    .jw-col-1  { flex: 1 ; }
+    .jw-col-2  { flex: 2; }
+    .jw-col-3  { flex: 3; }
+    .jw-col-4  { flex: 4; }
+    .jw-col-5  { flex: 5; }
+    .jw-col-6  { flex: 6; }
+    .jw-col-7  { flex: 7; }
+    .jw-col-8  { flex: 8; }
+    .jw-col-9  { flex: 9; }
+    .jw-col-10 { flex: 10; }
+    .jw-col-11 { flex: 11; }
+    .jw-col-12 { flex: 12; }
+    
 }
-                        /* ======== ======== JOWO WIDTH ======== ======== */
 
+.jw-margin{
+    & .jw-auto{
+        justify-content: space-around;
+        margin: 10px;
+    }
+}
+
+
+
+/* ======== ======== JOWO WIDTH ======== ======== */
 .jw-w10 { width: 10%; }
 .jw-w20 { width: 20%; }
 .jw-w25 { width: 25%; }
@@ -55,37 +68,26 @@ $white: #fff;
 .jw-w90 { width: 90%; }
 .jw-w100 { width: 100%; }
 
-                        /* ======== ======== JOWO MARGIN ======== ======== */
+/* ======== ======== JOWO MARGIN ======== ======== */
 
 .jw-margin8 { margin: 8px; }
 .jw-margin16{ margin: 16px;}
 .jw-margin24{ margin: 24px;}
 .jw-margin32{ margin: 32px;}
 .jw-margin64{ margin: 64px;}
+.jw-margin-default  { margin:10px;}
 
-.jw-margin8-v { margin: 8px 0; }
-.jw-margin16-v{ margin: 16px 0;}
-.jw-margin24-v{ margin: 24px 0;}
-.jw-margin32-v{ margin: 32px 0;}
-.jw-margin64-v{ margin: 64px 0;}
+/* ======== ======== JOWO PADDING ======== ======== */
 
-.jw-margin8-h { margin: 0 8px; }
-.jw-margin16-h{ margin: 0 16px;}
-.jw-margin24-h{ margin: 0 24px;}
-.jw-margin32-h{ margin: 0 32px;}
-.jw-margin64-h{ margin: 0 64px;}
-
-                        /* ======== ======== JOWO PADDING ======== ======== */
-
-.jw-padding8 { padding: 8px; } 
-.jw-padding10{ padding: 10px;} 
-.jw-padding16{ padding: 16px;}
-.jw-padding24{ padding: 24px;}
-.jw-padding32{ padding: 32px;}
-.jw-padding64{ padding: 64px;}
+.jw-padding8         { padding: 8px; } 
+.jw-padding-default  { padding: 10px;} 
+.jw-padding16        { padding: 16px;}
+.jw-padding24        { padding: 24px;}
+.jw-padding32        { padding: 32px;}
+.jw-padding64        { padding: 64px;}
 
 
-                        /* ======== ======== JOWO BACKGROUND ======== ======== */
+/* ======== ======== JOWO BACKGROUND ======== ======== */
 
 .jw-bg-green  { background: $green; }
 .jw-bg-red    { background: $red; }
@@ -95,65 +97,69 @@ $white: #fff;
 .jw-bg-orange { background: $orange; }
 .jw-bg-white { background: $white;}
 .jw-bg-transparent { background: $transparent;}
+.jw-bg-gradient-elegant{background: linear-gradient(rgba(0,0,0,.8), rgba(0,0,0,.8))};
 
 
-                        /* ======== ======== JOWO DISPLAY ======== ======== */
+/* ======== ======== JOWO TEXT COLOR ======== ======== */
 
-                                /* ======== JOWO DISPLAY TOP========*/
+.jw-text-green { color:$green; }
+.jw-text-red   { color:$red; }
+.jw-text-black { color:$black; }
+.jw-text-orange{ color:$orange; }
+.jw-text-white { color:$white; }
+.jw-text-blue  { color:$blue; }
+.jw-text-yellow{ color:$yellow; }
+
+                        /* ======== ======== JOWO NEON HOVER ======== ======== */
+                        
+                        .jw-neon-green-hover:hover { box-shadow: 0 0 6px $green; }
+.jw-neon-red-hover:hover   { box-shadow: 0 0 7px $red; }
+.jw-neon-black-hover:hover { box-shadow: 0 0 7px $black; }
+.jw-neon-orange-hover:hover{ box-shadow: 0 0 7px $orange; }
+.jw-neon-white-hover:hover { box-shadow: 0 0 7px $white; }
+.jw-neon-blue-hover:hover  { box-shadow: 0 0 7px $blue; }
+.jw-neon-yellow-hover:hover{ box-shadow: 0 0 7px $yellow; }
+
+
+
+/* ======== ======== JOWO BUTTONS OUTLINE  ======== ======== */
+
+.jw-button-outline-green  { padding: 10px 40px; border-radius: 5px; cursor: pointer; transition: all .2s ease-in-out; color: $green; border: 2px solid $green; background:transparent; }
+.jw-button-outline-black  { padding: 10px 40px; border-radius: 5px; cursor: pointer; transition: all .2s ease-in-out; color: $black; border: 2px solid $black; background:transparent; }
+.jw-button-outline-orange { padding: 10px 40px; border-radius: 5px; cursor: pointer; transition: all .2s ease-in-out; color: $orange;border: 2px solid $orange;background:transparent; }
+.jw-button-outline-red    { padding: 10px 40px; border-radius: 5px; cursor: pointer; transition: all .2s ease-in-out; color: $red;   border: 2px solid $red;   background:transparent; }
+.jw-button-outline-yellow { padding: 10px 40px; border-radius: 5px; cursor: pointer; transition: all .2s ease-in-out; color: $yellow;border: 2px solid $yellow;background:transparent; }
+.jw-button-outline-white  { padding: 10px 40px; border-radius: 5px; cursor: pointer; transition: all .2s ease-in-out; color: $white; border: 2px solid $white; background:transparent; }
+.jw-button-outline-blue   { padding: 10px 40px; border-radius: 5px; cursor: pointer; transition: all .2s ease-in-out; color: $blue;  border: 2px solid $blue;   background:transparent; }   
+/* ========  ======== JOWO BUTTONS ========  ======== */
+.jw-button     { border: none; padding: 10px 40px; border-radius: 5px; cursor: pointer; transition: all .2s ease-in-out; color: white; }
+.jw-btn-rounded{ border-radius: 100px; }
+.btn:active    { transform: scale(0.95); }
+
+ 
+                            /* ======== ======== JOWO DISPLAY ======== ======== */ 
+
+/* ======== JOWO DISPLAY TOP========*/
 
 .jw-display-top-left     { position: absolute; top: 0%;    left:  0%;   transform: translate(0%,0%);     }
 .jw-display-top-center   { position: absolute; top: 0%;    left: 50%;   transform: translate(-50%,0%);   }
 .jw-display-top-right    { position: absolute; top: 0%;    right: 0%;   transform: translate(0%,0%);     }
 
-                                /* ======== JOWO DISPLAY CENTER========*/
+/* ======== JOWO DISPLAY CENTER========*/
 
 .jw-display-center       { position: absolute; top: 50%;   left: 50%;   transform: translate(-50%,-50%); }
 .jw-display-center-left  { position: absolute; top: 50%;   left:  0%;   transform: translate(0%,-50%);   }
 .jw-display-center-right { position: absolute; top: 50%;   right: 0%;   transform: translate(0%,-50%);   }
-                                /* ======== JOWO DISPLAY RIGHT========*/
+/* ======== JOWO DISPLAY RIGHT========*/
 
 .jw-display-bottom-left  { position: absolute; bottom: 0%; left:  0%;   transform: translate(0%,0%);     }
 .jw-display-bottom-center{ position: absolute; bottom: 0%; left: 50%;   transform: translate(-50%,0%);   }
 .jw-display-bottom-right { position: absolute; bottom: 0%; right: 0%;   transform: translate(0%,0%);     }
 
-.jw-button{ border: none; padding: 10px 40px; border-radius: 5px; cursor: pointer; transition: all .2s ease-in-out; }
-.jw-button:active{ transform: scale(.95);}
 
 
-                        /* ======== ======== JOWO TEXT COLOR ======== ======== */
-
-.jw-text-green{ color:$green; }
-.jw-text-red{ color:$red; }
-.jw-text-black{ color:$black; }
-.jw-text-orange{ color:$orange; }
-.jw-text-white{ color:$white; }
-.jw-text-blue{ color:$blue; }
-.jw-text-yellow{ color:$yellow; }
-
-                        /* ======== ======== JOWO NEON HOVER ======== ======== */
-
-.jw-neon-green-hover:hover{ box-shadow: 0 0 6px $green; }
-.jw-neon-red-hover:hover{ box-shadow: 0 0 6px $red; }
-.jw-neon-black-hover:hover{ box-shadow: 0 0 6px $black; }
-.jw-neon-orange-hover:hover{ box-shadow: 0 0 6px $orange; }
-.jw-neon-white-hover:hover{ box-shadow: 0 0 6px $white; }
-.jw-neon-blue-hover:hover{ box-shadow: 0 0 6px $blue; }
-.jw-neon-yellow-hover:hover{ box-shadow: 0 0 6px $yellow; }
-
-
-
-                        /* ======== ======== JOWO BUTTON HOVER ======== ======== */
-
-.jw-border-green{ border: 1px solid $green; }
-.jw-border-black{ border: 1px solid $black; }
-.jw-border-orange{ border:1px solid $orange; }
-.jw-border-red{ border:   1px solid $red; }
-.jw-border-yellow{ border:   1px solid $yellow; }
-.jw-border-white{ border:   1px solid $white; }
-.jw-border-blue{ border:   1px solid $red; }
-
-                        /* ========  ======== Sliders ========  ======== */
-
+                        /* ========  ======== JOWO Sliders ========  ======== */
+                        
 .slider{
     overflow: hidden;
     margin: auto;
@@ -168,4 +174,80 @@ $white: #fff;
             list-style: none;
         }
     }
+}
+                        /* ========  ======== JOWO REGLAS MEDIA QUERIES ========  ======== */
+
+@media screen and (max-width:768px)
+{
+    .jw-row{ .jw-col-auto{ flex: 1 1 50%;}} 
+}
+@media screen and (max-width:480px)
+{
+    .jw-row{ .jw-col-auto{ flex: 1 1 100%;}} 
+}
+.jw-nav-fixed{
+    position: fixed;
+}
+.jw-navbar{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 100;
+}
+.jw-nav-logo{
+    padding: 10px;
+}
+.jw-nav-logo a{
+    text-decoration: none;
+    color: $orange;
+    display: block;
+    font-size: 1.4em;
+
+}
+.jw-nav-list{
+    display: flex;
+    
+}
+.jw-nav-item{
+    list-style: none;
+    position: relative;
+}
+.jw-nav-link{
+    text-decoration: none;
+    display: block;
+    color: white;
+    padding: 15px;
+}
+.jw-nav-link:hover{
+    background: rgba(255,255,255,.3);
+}
+.jw-sub-menu{
+    position: absolute;
+    display: block;
+    width: 100%;
+    transition: all .2s ease-in-out;
+    transform-origin: top center;
+    transform: scale(1,0);
+}
+.dropdown-effect:hover  .jw-sub-menu{
+    transform: scale(1,1);
+}
+.jw-sub-nav-item{
+    list-style: none;
+}
+.jw-sub-nav-link{
+    text-decoration: none;
+    display: block;
+    color: white;
+    padding: 15px;
+}
+.jw-sub-nav-link:hover{
+        background: white;
+        color: #222;
+}
+#im1{
+    background: linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.8)), url('https://i.pinimg.com/originals/07/e1/49/07e1495d10c992aa6dd59d640637f9fe.jpg');
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
 }

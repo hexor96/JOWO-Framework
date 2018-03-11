@@ -1,78 +1,91 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: 'Roboto', sans-serif;
+  color: white;
 }
 
-body {
-  background: #222;
-}
-
+/* ======== ======== JOWO NAVBAR ======== ======== */
 /* ======== ======== JOWO VARIABLES COLORES ======== ======== */
 /* ======== ======== JOWO CONTAINERS ======== ======== */
 .jw-container {
   width: 100%;
   position: relative;
-  min-height: 300px;
+  height: auto;
+  padding: 10px;
 }
 
-.jw-container-flex {
+.jw-full-screen {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  z-index: -1;
+}
+
+/* ======== ======== JOWO CONTAINER FLEX ======== ======== */
+.jw-row {
   width: 100%;
   display: flex;
   flex-flow: row wrap;
 }
 
-.jw-container-flex .jw-auto {
+.jw-row .jw-col-auto {
   flex: 1;
 }
 
-.jw-container-flex .jw-f1 {
+.jw-row .jw-col-1 {
   flex: 1;
 }
 
-.jw-container-flex .jw-f2 {
+.jw-row .jw-col-2 {
   flex: 2;
 }
 
-.jw-container-flex .jw-f3 {
+.jw-row .jw-col-3 {
   flex: 3;
 }
 
-.jw-container-flex .jw-f4 {
+.jw-row .jw-col-4 {
   flex: 4;
 }
 
-.jw-container-flex .jw-f5 {
+.jw-row .jw-col-5 {
   flex: 5;
 }
 
-.jw-container-flex .jw-f6 {
+.jw-row .jw-col-6 {
   flex: 6;
 }
 
-.jw-container-flex .jw-f7 {
+.jw-row .jw-col-7 {
   flex: 7;
 }
 
-.jw-container-flex .jw-f8 {
+.jw-row .jw-col-8 {
   flex: 8;
 }
 
-.jw-container-flex .jw-f9 {
+.jw-row .jw-col-9 {
   flex: 9;
 }
 
-.jw-container-flex .jw-f10 {
+.jw-row .jw-col-10 {
   flex: 10;
 }
 
-.jw-container-flex .jw-f11 {
+.jw-row .jw-col-11 {
   flex: 11;
 }
 
-.jw-container-flex .jw-f12 {
+.jw-row .jw-col-12 {
   flex: 12;
+}
+
+.jw-margin .jw-auto {
+  justify-content: space-around;
+  margin: 10px;
 }
 
 /* ======== ======== JOWO WIDTH ======== ======== */
@@ -149,44 +162,8 @@ body {
   margin: 64px;
 }
 
-.jw-margin8-v {
-  margin: 8px 0;
-}
-
-.jw-margin16-v {
-  margin: 16px 0;
-}
-
-.jw-margin24-v {
-  margin: 24px 0;
-}
-
-.jw-margin32-v {
-  margin: 32px 0;
-}
-
-.jw-margin64-v {
-  margin: 64px 0;
-}
-
-.jw-margin8-h {
-  margin: 0 8px;
-}
-
-.jw-margin16-h {
-  margin: 0 16px;
-}
-
-.jw-margin24-h {
-  margin: 0 24px;
-}
-
-.jw-margin32-h {
-  margin: 0 32px;
-}
-
-.jw-margin64-h {
-  margin: 0 64px;
+.jw-margin-default {
+  margin: 10px;
 }
 
 /* ======== ======== JOWO PADDING ======== ======== */
@@ -194,7 +171,7 @@ body {
   padding: 8px;
 }
 
-.jw-padding10 {
+.jw-padding-default {
   padding: 10px;
 }
 
@@ -232,7 +209,7 @@ body {
 }
 
 .jw-bg-yellow {
-  background: #ffff23;
+  background: #ffdf23;
 }
 
 .jw-bg-orange {
@@ -245,6 +222,157 @@ body {
 
 .jw-bg-transparent {
   background: transparent;
+}
+
+.jw-bg-gradient-elegant {
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
+}
+
+/* ======== ======== JOWO TEXT COLOR ======== ======== */
+.jw-text-green {
+  color: #1fff48;
+}
+
+.jw-text-red {
+  color: #fd4242;
+}
+
+.jw-text-black {
+  color: #222222;
+}
+
+.jw-text-orange {
+  color: #ff6619;
+}
+
+.jw-text-white {
+  color: #fff;
+}
+
+.jw-text-blue {
+  color: #494cfa;
+}
+
+.jw-text-yellow {
+  color: #ffdf23;
+}
+
+/* ======== ======== JOWO NEON HOVER ======== ======== */
+.jw-neon-green-hover:hover {
+  box-shadow: 0 0 6px #1fff48;
+}
+
+.jw-neon-red-hover:hover {
+  box-shadow: 0 0 7px #fd4242;
+}
+
+.jw-neon-black-hover:hover {
+  box-shadow: 0 0 7px #222222;
+}
+
+.jw-neon-orange-hover:hover {
+  box-shadow: 0 0 7px #ff6619;
+}
+
+.jw-neon-white-hover:hover {
+  box-shadow: 0 0 7px #fff;
+}
+
+.jw-neon-blue-hover:hover {
+  box-shadow: 0 0 7px #494cfa;
+}
+
+.jw-neon-yellow-hover:hover {
+  box-shadow: 0 0 7px #ffdf23;
+}
+
+/* ======== ======== JOWO BUTTONS OUTLINE  ======== ======== */
+.jw-button-outline-green {
+  padding: 10px 40px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+  color: #1fff48;
+  border: 2px solid #1fff48;
+  background: transparent;
+}
+
+.jw-button-outline-black {
+  padding: 10px 40px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+  color: #222222;
+  border: 2px solid #222222;
+  background: transparent;
+}
+
+.jw-button-outline-orange {
+  padding: 10px 40px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+  color: #ff6619;
+  border: 2px solid #ff6619;
+  background: transparent;
+}
+
+.jw-button-outline-red {
+  padding: 10px 40px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+  color: #fd4242;
+  border: 2px solid #fd4242;
+  background: transparent;
+}
+
+.jw-button-outline-yellow {
+  padding: 10px 40px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+  color: #ffdf23;
+  border: 2px solid #ffdf23;
+  background: transparent;
+}
+
+.jw-button-outline-white {
+  padding: 10px 40px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+  color: #fff;
+  border: 2px solid #fff;
+  background: transparent;
+}
+
+.jw-button-outline-blue {
+  padding: 10px 40px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+  color: #494cfa;
+  border: 2px solid #494cfa;
+  background: transparent;
+}
+
+/* ========  ======== JOWO BUTTONS ========  ======== */
+.jw-button {
+  border: none;
+  padding: 10px 40px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+  color: white;
+}
+
+.jw-btn-rounded {
+  border-radius: 100px;
+}
+
+.btn:active {
+  transform: scale(0.95);
 }
 
 /* ======== ======== JOWO DISPLAY ======== ======== */
@@ -314,106 +442,7 @@ body {
   transform: translate(0%, 0%);
 }
 
-.jw-button {
-  border: none;
-  padding: 10px 40px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: all .2s ease-in-out;
-}
-
-.jw-button:active {
-  transform: scale(0.95);
-}
-
-/* ======== ======== JOWO TEXT COLOR ======== ======== */
-.jw-text-green {
-  color: #1fff48;
-}
-
-.jw-text-red {
-  color: #fd4242;
-}
-
-.jw-text-black {
-  color: #222222;
-}
-
-.jw-text-orange {
-  color: #ff6619;
-}
-
-.jw-text-white {
-  color: #fff;
-}
-
-.jw-text-blue {
-  color: #494cfa;
-}
-
-.jw-text-yellow {
-  color: #ffff23;
-}
-
-/* ======== ======== JOWO NEON HOVER ======== ======== */
-.jw-neon-green-hover:hover {
-  box-shadow: 0 0 6px #1fff48;
-}
-
-.jw-neon-red-hover:hover {
-  box-shadow: 0 0 6px #fd4242;
-}
-
-.jw-neon-black-hover:hover {
-  box-shadow: 0 0 6px #222222;
-}
-
-.jw-neon-orange-hover:hover {
-  box-shadow: 0 0 6px #ff6619;
-}
-
-.jw-neon-white-hover:hover {
-  box-shadow: 0 0 6px #fff;
-}
-
-.jw-neon-blue-hover:hover {
-  box-shadow: 0 0 6px #494cfa;
-}
-
-.jw-neon-yellow-hover:hover {
-  box-shadow: 0 0 6px #ffff23;
-}
-
-/* ======== ======== JOWO BUTTON HOVER ======== ======== */
-.jw-border-green {
-  border: 1px solid #1fff48;
-}
-
-.jw-border-black {
-  border: 1px solid #222222;
-}
-
-.jw-border-orange {
-  border: 1px solid #ff6619;
-}
-
-.jw-border-red {
-  border: 1px solid #fd4242;
-}
-
-.jw-border-yellow {
-  border: 1px solid #ffff23;
-}
-
-.jw-border-white {
-  border: 1px solid #fff;
-}
-
-.jw-border-blue {
-  border: 1px solid #fd4242;
-}
-
-/* ========  ======== Sliders ========  ======== */
+/* ========  ======== JOWO Sliders ========  ======== */
 .slider {
   overflow: hidden;
   margin: auto;
@@ -430,5 +459,96 @@ body {
   width: 100%;
   height: 100%;
   list-style: none;
+}
+
+/* ========  ======== JOWO REGLAS MEDIA QUERIES ========  ======== */
+@media screen and (max-width: 768px) {
+  .jw-row .jw-col-auto {
+    flex: 1 1 50%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .jw-row .jw-col-auto {
+    flex: 1 1 100%;
+  }
+}
+
+.jw-nav-fixed {
+  position: fixed;
+}
+
+.jw-navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  z-index: 100;
+}
+
+.jw-nav-logo {
+  padding: 10px;
+}
+
+.jw-nav-logo a {
+  text-decoration: none;
+  color: #ff6619;
+  display: block;
+  font-size: 1.4em;
+}
+
+.jw-nav-list {
+  display: flex;
+}
+
+.jw-nav-item {
+  list-style: none;
+  position: relative;
+}
+
+.jw-nav-link {
+  text-decoration: none;
+  display: block;
+  color: white;
+  padding: 15px;
+}
+
+.jw-nav-link:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.jw-sub-menu {
+  position: absolute;
+  display: block;
+  width: 100%;
+  transition: all .2s ease-in-out;
+  transform-origin: top center;
+  transform: scale(1, 0);
+}
+
+.dropdown-effect:hover .jw-sub-menu {
+  transform: scale(1, 1);
+}
+
+.jw-sub-nav-item {
+  list-style: none;
+}
+
+.jw-sub-nav-link {
+  text-decoration: none;
+  display: block;
+  color: white;
+  padding: 15px;
+}
+
+.jw-sub-nav-link:hover {
+  background: white;
+  color: #222;
+}
+
+#im1 {
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("https://i.pinimg.com/originals/07/e1/49/07e1495d10c992aa6dd59d640637f9fe.jpg");
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
 }
 /*# sourceMappingURL=estilos.css.map */
