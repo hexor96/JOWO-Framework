@@ -443,7 +443,7 @@
 
 /* ========  ======== JOWO Sliders ========  ======== */
 .sliderContainer {
-  z-index: 0;
+  z-index: 0 !important;
   overflow: hidden;
   position: relative;
 }
@@ -496,6 +496,11 @@
   width: 25px;
   height: 25px;
   background-color: #323232;
+}
+
+.sliderButtons button.activo {
+  background-color: #eee;
+  color: #323232;
 }
 
 .sliderContainer:hover .sliderButtons {

@@ -1,12 +1,3 @@
-var alv;
-
-window.onload = function () {
-    alv = new Slider('miSlider', {
-        botones: true,
-        duracion: 5000
-    });
-};
-
 var Slider = /** @class */ (function () {
     function Slider(nombre, parametros) {
         var _this = this;
@@ -22,20 +13,40 @@ var Slider = /** @class */ (function () {
         };
         this.movimiento = function (numero) {
             if (numero === void 0) { numero = NaN; }
+            _this.toggleButton();
             _this.slides[_this.actualSlide].style.display = "none";
             _this.actualSlide++;
             if (_this.actualSlide === _this.cantSlides)
                 _this.actualSlide = 0;
             _this.actualSlide = numero || _this.actualSlide;
+            _this.toggleButton();
             _this.slides[_this.actualSlide].style.display = "block";
             _this.slides[_this.actualSlide].style.animation = 'aparecer 1s forwards';
         };
-        this.agregarBotones = function () {
+        this.toggleButton = function () {
+            if (_this.botones)
+                _this.botones[_this.actualSlide].classList.toggle("activo");
+        };
+        this.agregarBotones = function (parametros) {
+            _this.botones = [];
             var contenedor = document.createElement("div");
             contenedor.classList.add("sliderButtons");
             for (var i = 0; i < _this.cantSlides; i++) {
                 var boton = document.createElement("button");
-                boton.setAttribute("onclick", "abrirSlide(" + (i) + ")");
+                boton.innerText = (i + 1) + '';
+                if (parametros.clickeable) {
+                    boton.setAttribute("data-slide", i + '');
+                    boton.addEventListener("click", function (evento) {
+                        var numero = parseInt(evento.target.getAttribute("data-slide"));
+                        if (_this.actualSlide !== numero) {
+                            _this.movimiento(numero);
+                        }
+                    });
+                }
+                _this.botones.push(boton);
+                if (_this.actualSlide === i) {
+                    _this.botones[i].classList.toggle("activo");
+                }
                 contenedor.appendChild(boton);
             }
             _this.slider.parentElement.appendChild(contenedor);
@@ -45,12 +56,9 @@ var Slider = /** @class */ (function () {
         this.cantSlides = this.slides.length;
         this.actualSlide = 0;
         this.duracion = parametros.duracion || 3000;
-        if (parametros.botones)
-            this.agregarBotones();
+        if (parametros.paginacion)
+            this.agregarBotones(parametros.paginacion);
         this.iniciarMovimiento();
     }
     return Slider;
 }());
-var abrirSlide = function (numero) {
-    alv.movimiento(numero);
-};
